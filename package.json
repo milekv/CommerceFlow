@@ -1,10 +1,11 @@
 {
   "name": "commerceflow",
   "version": "1.0.0",
-  "description": "CommerceFlow",
+  "description": "Platforma e-commerce CommerceFlow",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo 'No tests defined'"
   },
   "dependencies": {
     "express": "^4.17.1",
