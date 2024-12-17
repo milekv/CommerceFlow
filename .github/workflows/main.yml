@@ -15,6 +15,40 @@ jobs:
       NODE_ENV: production
 
     steps:
+      # Pobranie kodu
+      - name: Pobranie kodu
+        uses: actions/checkout@v2
+
+      # Instalacja Node.js
+      - name: Instalacja Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      # Instalacja zależności
+      - name: Instalacja zależności
+        run: npm install
+
+      # Uruchamianie aplikacji
+      - name: Uruchamianie aplikacji
+        run: npm start
+name: Node.js CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
+
+    steps:
       # Pobranie kodu z repozytorium
       - name: Pobranie kodu
         uses: actions/checkout@v2
