@@ -6,7 +6,7 @@ const sequelize = new Sequelize(
   'haslo', 
   {
     host: 'localhost',
-    dialect: 'mysql', 
+    dialect: 'mysql',
   }
 );
 
