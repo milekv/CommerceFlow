@@ -19,6 +19,11 @@
 - dotenv
 - cors
 - body-parser
+## Diagram ERD
+Poniżej znajduje się link do diagramu ERD projektu:
+
+[ Diagram ERD ](https://github.com/milekv/CommerceFlow/blob/main/CommerceFlow.pdf)
+
 
 ```bash
 git clone https://github.com/milekv/commerceflow.git
