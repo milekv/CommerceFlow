@@ -22,7 +22,7 @@
 ## Diagram ERD
 Poniżej znajduje się link do diagramu ERD projektu:
 
-[ Diagram ERD ](https://github.com/milekv/CommerceFlow/blob/main/CommerceFlow.pdf)
+[ Diagram ERD ](https://github.com/milekv/CommerceFlow/blob/main/CommerceFlow.png)
 
 
 ```bash
