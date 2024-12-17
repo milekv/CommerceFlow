@@ -1,14 +1,18 @@
 {
   "name": "commerceflow",
   "version": "1.0.0",
-  "description": "Platforma e-commerce CommerceFlow",
+  "description": "API platformy e-commerce z Node.js i Express",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo 'No tests defined'"
+    "test": "echo \"No tests yet\""
   },
   "dependencies": {
     "express": "^4.17.1",
-    "cors": "^2.8.5"
-  }
+    "sequelize": "^6.6.5",
+    "mysql2": "^2.3.3"
+  },
+  "author": "milekv",
+  "license": "MIT"
 }
+
