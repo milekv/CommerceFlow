@@ -8,11 +8,13 @@
     "test": "echo \"No tests yet\""
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "sequelize": "^6.6.5",
-    "mysql2": "^2.3.3"
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mysql2": "^2.3.3",
+    "pg": "^8.13.1",
+    "sequelize": "^6.6.5"
   },
   "author": "milekv",
   "license": "MIT"
 }
-
