@@ -1,36 +1,20 @@
 const express = require('express');
-const cors = require('cors');
+const bodyParser = require('body-parser');
+const db = require('./db');
+const userRoutes = require('./routes/users');
 
 const app = express();
-app.use(express.json());
-app.use(cors());
+const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.send('testowa wiadomosc');
-});
+app.use(bodyParser.json());
 
-const PORT = 5000;
+app.use('/api/users', userRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Serwer działa na porcie ${PORT}`);
-});
-
-const express = require('express');
-const cors = require('cors');
-
-const app = express();
-app.use(express.json());
-app.use(cors());
-
-// Root endpoint
-app.get('/', (req, res) => {
-  res.send('CommerceFlow działa!');
-});
-
-// Przykładowy endpoint: Pobranie statusu
-app.get('/status', (req, res) => {
-  res.json({ status: 'System działa poprawnie!' });
-});
-
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Serwer uruchomiony na porcie ${PORT}`));
+db.sync()
+  .then(() => {
+    console.log('Połączono z bazą danych');
+    app.listen(PORT, () => {
+      console.log(`Serwer uruchomiony na porcie ${PORT}`);
+    });
+  })
+  .catch((err) => console.log(err));
