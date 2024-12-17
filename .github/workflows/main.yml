@@ -15,16 +15,24 @@ jobs:
       NODE_ENV: production
 
     steps:
-      - name: Checkout repozytorium
+      # Pobranie kodu z repozytorium
+      - name: Pobranie kodu
         uses: actions/checkout@v2
 
+      # Instalacja Node.js w wersji 18
       - name: Instalacja Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18"
+          node-version: '18'
 
+      # Instalacja zależności
       - name: Instalacja zależności
         run: npm install
 
-      - name: Uruchamianie serwera
+      # Uruchamianie testów
+      - name: Uruchamianie testów
+        run: npm test
+
+      # Uruchamianie aplikacji
+      - name: Uruchamianie aplikacji
         run: npm start
