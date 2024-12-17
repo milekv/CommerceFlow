@@ -15,6 +15,7 @@ jobs:
       NODE_ENV: production
 
     steps:
+  
       - name: Checkout repozytorium
         uses: actions/checkout@v2
 
@@ -23,11 +24,17 @@ jobs:
         with:
           node-version: '18' 
 
-      - name: Instalacja potrzbenych rzeczy
-        run: npm install
+      - name: Instalacja potrzebnych zależności
+        run: |
+          cd CommerceFlow
+          npm install
 
-      - name: Uruchamianie testow
-        run: npm test
+      - name: Uruchamianie testów
+        run: |
+          cd CommerceFlow
+          npm test
 
       - name: Uruchamianie aplikacji
-        run: npm start
+        run: |
+          cd CommerceFlow
+          npm start
