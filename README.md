@@ -20,7 +20,6 @@
 - cors
 - body-parser
 ## Diagram ERD
-Poniżej znajduje się link do diagramu ERD projektu:
 
 ![Diagram ERD](CommerceFlow.png)
 
